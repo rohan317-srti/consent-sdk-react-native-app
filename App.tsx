@@ -96,31 +96,31 @@ export default function App() {
     const subscription = AppState.addEventListener('change', handleAppStateChange);
 
     // Initialize SDK with appropriate options based on platform
-const initOptions: CmpSDKOptions = Platform.OS === 'android'
-        ? {
-    appURL: 'https://qa.securiti.xyz/',
-    cdnURL: 'https://cdn-qa.securiti.xyz/consent',
-    tenantID: 'fefd076c-8be0-4bc7-9ad9-63a5256d7d4a',
-    appID: '5d23df9b-78e1-48f0-b98a-e9731738a89a',
-    testingMode: true,
-    loggerLevel: LoggerLevel.DEBUG,
-    consentsCheckInterval: 3600,
-    subjectId: 'reactNativeAndroidSubject',
-    languageCode: '',
-    locationCode: '',
-  }
-: {
-    appURL: 'https://dev-intg-2.securiti.xyz/',
-    cdnURL: 'https://cdn-dev-intg-2.securiti.xyz/',
-    tenantID: 'd525a59e-896e-4a85-ad1a-84921e9acce0',
-    appID: 'a2d3c183-0a3c-4bb9-ba3b-6b6de1949ed3',
-    testingMode: true,
-    loggerLevel: LoggerLevel.DEBUG,
-    consentsCheckInterval: 3600,
-    subjectId: 'reactNativeiOSSubject',
-    languageCode: 'en',
-    locationCode: 'AQ',
-  };
+   const initOptions: CmpSDKOptions = Platform.OS === 'android'
+      ? {
+          appURL: 'Your Android App URL',
+          cdnURL: 'Your Android CDN URL',
+          tenantID: 'Your Tenant ID',
+          appID: 'Your Android App ID',
+          testingMode: true,
+          loggerLevel: LoggerLevel.DEBUG,
+          consentsCheckInterval: 3600,
+          subjectId: 'reactNativeAndroidSubject',
+          languageCode: 'Your Language Code',
+          locationCode: 'Your Location Code',
+        }
+      : {
+          appURL: 'Your iOS App URL',
+          cdnURL: 'Your iOS CDN URL',
+          tenantID: 'Your Tenant ID',
+          appID: 'Your iOS App ID',
+          testingMode: true,
+          loggerLevel: LoggerLevel.DEBUG,
+          consentsCheckInterval: 3600,
+          subjectId: 'reactNativeiOSSubject',
+          languageCode: 'Your Language Code',
+          locationCode: 'Your Location Code',
+        };
 
     initialize(initOptions);
 
